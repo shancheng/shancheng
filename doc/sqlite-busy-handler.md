@@ -4,7 +4,7 @@ SQLite doesn't support high concurrency. In case of a lot of concurrent access f
 
 Below is an example function. When the SQLite function returns SQLITE_BUSY, the caller sleep one second then retry. The sleep is required to optimize the CPU utilization, without the sleep, the CPU will be occupied by a lot of retries.
 
-<pre>
+```c++
 bool Execute(const string& sql) {
   char* errmsg = NULL;
   while (true) {
@@ -24,11 +24,11 @@ bool Execute(const string& sql) {
   }
   return false;
 }
-</pre>
+```
 
 In fact, the caller doesn't need to sleep explicitly, calling [sqlite3_busy_timeout](https://sqlite.org/c3ref/busy_timeout.html) before SQLite r/w functions will make SQLite automaticlly insert sleep between two sequential calls of a r/w function. It's safe to set a big timeout value. SQLite splits the big timeout value into many small timeout values. With the optimization, if the lock is available while the caller is waiting, the caller won't need to wait to timeout. See below code,
 
-<pre>
+```c++
 1452  static int sqliteDefaultBusyCallback(
 1453   void *ptr,               /* Database connection */
 1454   int count                /* Number of times table has been busy */
@@ -67,7 +67,7 @@ In fact, the caller doesn't need to sleep explicitly, calling [sqlite3_busy_time
 1487    return 1;
 1488  #endif
 1489  }
-</pre>
+```
 
 Another alternative is set a busy hander by calling [sqlite3_busy_handler](https://sqlite.org/c3ref/busy_handler.html). If the busy callback returns 0, then no additional attempts are made to access the database and SQLITE_BUSY is returned to the application. If the callback returns non-zero, then another attempt is made to access the database and the cycle repeats.
 

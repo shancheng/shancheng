@@ -23,6 +23,7 @@ LDFLAGS         := $(OPTIMIZER)
 OS              := $(shell uname -s)
 SHELL           := sh
 TARGET_ARCH     :=
+LINK.o          = $(CXX) $(LDFLAGS) $(TARGET_ARCH)
 
 ifdef DEBUG
     CPPFLAGS += -g -DDEBUG

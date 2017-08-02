@@ -1,3 +1,5 @@
+# Reuse a SSL socket
+
 It's possible to reuse a SSL socket after proper cleanup.
 
 See [SSL Socket free and shutdown](https://stackoverflow.com/questions/21193743/ssl-socket-free-and-shutdown) on stackoverflow.

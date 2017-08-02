@@ -68,18 +68,18 @@ The threading mode for an individual database connection is determined by flags 
 
 See below code, once SQLITE_THREADSAFE=0, the mutex operations are omitted. That's why if single-thread mode is selected at compile-time, it is impossible to enable either multi-thread or serialized modes at start-time or run-time.
 
-<pre>
+```c++
 #if SQLITE_THREADSAFE
   sqlite3_mutex *mutex;
 #endif
-</pre>
+```
 
-<pre>
+```c++
 #if SQLITE_THREADSAFE
 # include <pthread.h>
 # define SQLITE_UNIX_THREADS 1
 #endif
-</pre>
+```
 
 ### SQLITE_THREADSAFE=1 and SQLITE_THREADSAFE=2 
 
@@ -88,28 +88,28 @@ SQLITE_THREADSAFE=1 means serialized mode, and -DSQLITE_THREADSAFE=2 means multi
 In both modes, mutexes are used to protect critical resource. So what's the difference? See below code,
 
 global.c
-<pre>
+```c++
 SQLITE_WSD struct Sqlite3Config sqlite3Config = {
    SQLITE_DEFAULT_MEMSTATUS,  /* bMemstat */
    1,                         /* bCoreMutex */
    SQLITE_THREADSAFE==1,      /* bFullMutex */
-</pre>
+```
 
 main.c
-<pre>
+```c++
 isThreadsafe = sqlite3GlobalConfig.bFullMutex;
 ...
 if( isThreadsafe ){
   db->mutex = sqlite3MutexAlloc(SQLITE_MUTEX_RECURSIVE);
-</pre>
+```
 
 vdbeblob.c
-<pre>
+```c++
 148 sqlite3_mutex_enter(db->mutex); in sqlite3_blob_open() 
 361 sqlite3_mutex_enter(db->mutex); in sqlite3_blob_close() 
 388 sqlite3_mutex_enter(db->mutex); in blobReadWrite() 
 486 sqlite3_mutex_enter(db->mutex); in sqlite3_blob_reopen()
-</pre> 
+```
 
 If SQLITE_THREADSAFE=1, SQLite allocates a mutex for each connection and use the mutex to serialize the operations on the connection.
 
