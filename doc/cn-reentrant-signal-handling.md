@@ -4,6 +4,7 @@
 
 需要注意的是在自定义的信号处理函数中不要调用malloc，也不要调用那些可能间接调用malloc的函数，这可能发生死锁。我们最近在一个死锁的程序中发现如下信息：
 
+```
 #0  0x00007fb80cfb612c in __lll_lock_wait_private () from /lib64/libc.so.6
 #1  0x00007fb80cf33f93 in _L_lock_14932 () from /lib64/libc.so.6
 #2  0x00007fb80cf31013 in malloc () from /lib64/libc.so.6
@@ -14,6 +15,7 @@
 #7  <signal handler called>
 #8  0x00007fb80cf2e4c2 in _int_malloc () from /lib64/libc.so.6
 #9  0x00007fb80cf30fbc in malloc () from /lib64/libc.so.6
+```
 
 在这个例子中malloc导致SIGSEGV，SIGSEGV又调用了一个会间接调用malloc的函数。由于malloc需要上锁，而嵌套调用的函数所需的的锁已被之前的调用获取，所以这里会出现死锁。
 
