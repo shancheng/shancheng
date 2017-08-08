@@ -19,6 +19,7 @@
 
 在这个例子中malloc导致SIGSEGV，SIGSEGV又调用了一个会间接调用malloc的函数。由于malloc需要上锁，而嵌套调用的函数所需的的锁已被之前的调用获取，所以这里会出现死锁。
 
-最后推荐俩篇相关文章
+最后推荐几篇相关文章
 * [使用可重入函数进行更安全的信号处理](https://www.ibm.com/developerworks/cn/linux/l-reent.html)
 * [linux: 可重入函数与不可重入函数](http://www.cnblogs.com/mylinux/p/4956771.html)
+* [POSIX Safety Concepts](https://www.gnu.org/software/libc/manual/html_mono/libc.html#POSIX-Safety-Concepts)
