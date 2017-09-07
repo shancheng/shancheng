@@ -1,8 +1,40 @@
-# Insall OpenStack using devstack
+# Install
 
-[centos 7 devstack 安装 openstack Mitaka](http://blog.csdn.net/scucscheng/article/details/51884613)
+https://wiki.openstack.org/wiki/Documentation/training-labs
 
-[Installing Openstack errors](https://stackoverflow.com/questions/20390267/installing-openstack-errors)
+https://docs.openstack.org/devstack/latest/
+
+https://docs.openstack.org/devstack/latest/guides.html
+
+## Speed up the install in china
+
+###### http://kiwik.github.io/openstack/2013/12/21/DevStack-install-in-China/
+
+/etc/apt/sources.list, copied from https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
+
+```
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+```
+
+~/.config/pip/pip.conf
+
+```
+[global]
+timeout = 6000
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+use-mirrors = true
+mirrors = https://pypi.tuna.tsinghua.edu.cn
+```
+
+###### [Installing Openstack errors](https://stackoverflow.com/questions/20390267/installing-openstack-errors)
 
 ```
 Make change in stackrc :
