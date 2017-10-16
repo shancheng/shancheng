@@ -11,6 +11,7 @@ xargs
 - -i
 
 [find + xargs 删除文件名中含有空格的文](http://blog.sina.com.cn/s/blog_53df94780100072w.html)
+
 问题：查找某个目录下更改时间超过7天的文件并删除它们。
 
 方法一：
