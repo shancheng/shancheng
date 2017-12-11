@@ -66,6 +66,15 @@ cpio
 
 losetup
 
+## Extract files from a package
+
+OS | Command
+-- | -------
+Linux | rpm2cpio RPM_FILE | cpio -idv
+Solaris | pkgtrans PKG_FILE TARGET_DIR
+HP-UX | tar xvf DEPOT_FILE
+AIX | installp -a -F -d IMAGE_FILE all
+
 # AIX
 
 System Management Interface Tool (SMIT)
