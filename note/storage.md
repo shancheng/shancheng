@@ -17,3 +17,14 @@ https://www.virtualtothecore.com/en/adventures-ceph-storage-part-2-architecture-
 https://www.virtualtothecore.com/en/adventures-ceph-storage-part-3-design-nodes/
 
 
+# Deduplication
+
+## Variable length hash
+
+https://en.wikipedia.org/wiki/Rolling_hash
+
+http://gsoc.cat-v.org/people/mjl/blog/2007/08/06/1_Rabin_fingerprints/
+
+## Integrity check
+
+https://www.emc.com/collateral/software/white-papers/h7219-data-domain-data-invul-arch-wp.pdf
