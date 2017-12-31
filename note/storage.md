@@ -19,11 +19,13 @@ https://www.virtualtothecore.com/en/adventures-ceph-storage-part-3-design-nodes/
 
 # Deduplication
 
-## Variable length hash
+## Rolling hash
 
 https://en.wikipedia.org/wiki/Rolling_hash
 
 http://gsoc.cat-v.org/people/mjl/blog/2007/08/06/1_Rabin_fingerprints/
+
+https://software.intel.com/en-us/articles/accelerate-data-deduplication-using-chunking-and-hashing-functions
 
 ## Integrity check
 

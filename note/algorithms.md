@@ -152,3 +152,21 @@ http://en.wikipedia.org/wiki/Space-filling_curve
 https://leetcode.com/problems/search-a-2d-matrix/
 
 https://leetcode.com/problems/search-a-2d-matrix-ii/
+
+# Reference
+
+###### Books
+
+Introduction to Algorithms
+
+Programming Challenges
+
+算法艺术与信息学竞赛
+
+###### articles
+
+http://blog.csdn.net/v_JULY_v/article/details/6530142
+从B树、B+树、B*树谈到R树
+
+http://topic.csdn.net/u/20101011/16/2befbfd9-f3e4-41c5-bb31-814e9615832e.html
+算法面试：精选微软经典的算法面试100题
