@@ -1,5 +1,11 @@
 # Machine Learning
 
+https://machinelearningmastery.com
+
+https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+
+https://github.com/hangtwenty/dive-into-machine-learning
+
 http://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/svd-and-applications.html
 
 http://www.cnblogs.com/LeftNotEasy/tag/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
