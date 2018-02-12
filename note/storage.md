@@ -1,3 +1,16 @@
+# Hardware
+
+http://en.wikipedia.org/wiki/Hard_disk_drive
+
+http://en.wikipedia.org/wiki/Disk_drive_performance_characteristics
+
+http://en.wikipedia.org/wiki/Solid-state_drive#Comparison_of_SSD_with_hard_disk_drives
+
+http://en.wikipedia.org/wiki/IOPS
+
+http://www.linuxvox.com/2009/10/how-fast-is-your-disk/
+
+
 # Storage protocols
 
 ## iSCSI
