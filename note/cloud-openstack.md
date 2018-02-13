@@ -23,7 +23,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
 ```
 
-~/.config/pip/pip.conf
+~/.config/pip/pip.conf and ~/.pip/pip.conf
 
 ```
 [global]
