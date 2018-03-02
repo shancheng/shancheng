@@ -43,3 +43,24 @@ http://en.wikipedia.org/wiki/GNU_Screen
 GNU Screen is a software application that can be used to multiplex several virtual consoles, allowing a user to access multiple separate terminal sessions inside a single terminal window or remote terminal session
 
 http://www.ibm.com/developerworks/cn/linux/l-cn-screen/
+
+
+# Windows
+
+## Limits
+
+https://blogs.technet.microsoft.com/markrussinovich
+
+Pushing the Limits of Windows: Physical Memory
+
+Pushing the Limits of Windows: Virtual Memory
+
+Pushing the Limits of Windows: Paged and Nonpaged Pool
+
+Pushing the Limits of Windows: Processes and Threads
+
+Pushing the Limits of Windows: Handles
+
+Pushing the Limits of Windows: USER and GDI Objects – Part 1
+
+Pushing the Limits of Windows: USER and GDI Objects – Part 2

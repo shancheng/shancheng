@@ -10,6 +10,18 @@ http://en.wikipedia.org/wiki/IOPS
 
 http://www.linuxvox.com/2009/10/how-fast-is-your-disk/
 
+## Flash, Fusion and SSD
+
+https://en.wikipedia.org/wiki/Flash_memory
+
+https://en.wikipedia.org/wiki/Fusion-io
+
+[Fusion-io软件定义存储：全闪存阵列DIY时代？](http://storage.chinabyte.com/18/12398018.shtml)
+
+[浅析Fusion-IO和Intel SSD](http://www.cnblogs.com/jhj117/p/5780597.html)
+
+https://serverfault.com/questions/523278/do-i-need-to-raid-fusion-io-cards
+
 
 # Storage protocols
 
@@ -22,6 +34,12 @@ https://en.wikipedia.org/wiki/LIO_(SCSI_target)
 [在RHEL / CentOS 7上使用iSCSI目标/启动器创建集中安全存储](https://www.howtoing.com/create-centralized-secure-storage-using-iscsi-target-initiator/)
 
 [Comparing Performance Between iSCSI, FCoE, and FC](http://en.community.dell.com/techcenter/storage/w/wiki/2722.comparing-performance-between-iscsi-fcoe-and-fc)
+
+## Object storage
+
+https://www.storagecraft.com/blog/storage-wars-file-block-object-storage/
+
+http://www.enterprisestorageforum.com/storage-management/object-storage-vs.-file-storage.html
 
 
 # Ceph
