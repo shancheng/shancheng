@@ -63,6 +63,37 @@ https://www.virtualtothecore.com/en/adventures-ceph-storage-part-3-design-nodes/
 
 # Deduplication
 
+https://en.wikipedia.org/wiki/Data_deduplication
+
+In computing, data deduplication is a specialized data compression technique for eliminating duplicate copies of repeating data. Related and somewhat synonymous terms are intelligent (data) compression and single-instance (data) storage. This technique is used to improve storage utilization and can also be applied to network data transfers to reduce the number of bytes that must be sent. In the deduplication process, unique chunks of data, or byte patterns, are identified and stored during a process of analysis. As the analysis continues, other chunks are compared to the stored copy and whenever a match occurs, the redundant chunk is replaced with a small reference that points to the stored chunk. Given that the same byte pattern may occur dozens, hundreds, or even thousands of times (the match frequency is dependent on the chunk size), the amount of data that must be stored or transferred can be greatly reduced.
+
+## The applications that can benefit from data deduplicataion
+
+Data backup
+
+Email
+
+NetDisk
+
+## Implementation considerations
+
+When to dedupe
+- Post-process deduplication
+- In-line Deduplication
+
+Where to dedupe
+- Source deduplication
+- Target deduplication
+
+Data format
+- Content-agnostic data deduplication
+- Content-aware data deduplication
+
+Commercial deduplication implementations differ by their chunking methods and architectures.
+- Chunking. In some systems, chunks are defined by physical layer constraints (e.g. 4KB block size in WAFL). In some systems only complete files are compared, which is called single-instance storage or SIS. The most intelligent (but CPU intensive) method to chunking is generally considered to be sliding-block. In sliding block, a window is passed along the file stream to seek out more naturally occurring internal file boundaries.
+- Client backup deduplication. This is the process where the deduplication hash calculations are initially created on the source (client) machines. Files that have identical hashes to files already in the target device are not sent, the target device just creates appropriate internal links to reference the duplicated data. The benefit of this is that it avoids data being unnecessarily sent across the network thereby reducing traffic load.
+- Primary storage and secondary storage. By definition, primary storage systems are designed for optimal performance, rather than lowest possible cost. The design criteria for these systems is to increase performance, at the expense of other considerations. Moreover, primary storage systems are much less tolerant of any operation that can negatively impact performance. Also by definition, secondary storage systems contain primarily duplicate, or secondary copies of data. These copies of data are typically not used for actual production operations and as a result are more tolerant of some performance degradation, in exchange for increased efficiency.
+
 ## Rolling hash
 
 https://en.wikipedia.org/wiki/Rolling_hash
@@ -120,3 +151,10 @@ Minio is a distributed object storage server, written in Go and open sourced und
 ###### LIO
 
 https://en.wikipedia.org/wiki/LIO_(SCSI_target)
+
+
+# Hierarchical storage management
+
+https://en.wikipedia.org/wiki/Hierarchical_storage_management
+
+Hierarchical storage management (HSM) is a data storage technique that automatically moves data between high-cost and low-cost storage media. HSM systems exist because high-speed storage devices, such as solid state drive arrays, are more expensive (per byte stored) than slower devices, such as hard disk drives, optical discs and magnetic tape drives. While it would be ideal to have all data available on high-speed devices all the time, this is prohibitively expensive for many organizations. Instead, HSM systems store the bulk of the enterprise's data on slower devices, and then copy data to faster disk drives when needed. In effect, HSM turns the fast disk drives into caches for the slower mass storage devices. The HSM system monitors the way data is used and makes best guesses as to which data can safely be moved to slower devices and which data should stay on the fast devices.
