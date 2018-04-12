@@ -94,6 +94,22 @@ http://www.postgresql.org/docs/9.1/static/wal-reliability.html
 [小议同步IO ：fsync与fdatasync](http://www.cnblogs.com/promise6522/archive/2012/05/27/2520028.html)
 
 
+# Logical Volume Manager
+
+https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)
+
+## Snapshot
+
+http://www.tuxfixer.com/backup-and-restore-logical-volume-using-lvm-snapshot/
+
+```
+lvcreate --snapshot --name storage_snapshot -L 10G /dev/fedora/storage
+umount /mnt
+lvconvert --merge /dev/fedora/storage_snapshot
+mount /dev/fedora/storage /mnt
+```
+
+
 # Resource
 
 http://en.wikipedia.org/wiki/Comparison_of_file_systems
