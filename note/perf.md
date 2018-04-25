@@ -23,6 +23,11 @@ opreport -l -c
 ## valgrind
 
 http://www.ibm.com/developerworks/cn/linux/l-cn-valgrind/index.html
+- 使用未初始化的内存
+- 内存读写越界
+- 内存覆盖
+- 动态内存管理错误
+- 内存泄露
 
 ## gprof
 

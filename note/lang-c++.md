@@ -3,7 +3,7 @@ http://en.wikipedia.org/wiki/Rule_of_three_(C++\_programming)
 https://stackoverflow.com/questions/1434937/namespace-functions-versus-static-methods-on-a-class
 
 
-# C++ books
+# C++ books and resources
 
 Modern C++ Design
 
@@ -80,6 +80,13 @@ __LINE__
 #define NEW(class_, ...) new class_(__VA_ARGS__)
 #define CONNECT(a, b) a##b
 ```
+
+
+# C++ error handling
+
+https://www.codeproject.com/Articles/38449/C-Exceptions-Pros-and-Cons
+
+https://stackoverflow.com/questions/1849490/c-arguments-for-exceptions-over-return-codes
 
 
 # C++ build systems

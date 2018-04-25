@@ -1,3 +1,17 @@
+# Kernel parameters
+
+###### How to adjust kernel maximum share memory size
+
+/etc/sysctl.conf
+```
+kernel.shmmax=134217728
+```
+
+sysctl -w kernel.shmmax=134217728
+
+
+# Memory allocation
+
 ###### Buddy memory allocation
 
 https://en.wikipedia.org/wiki/Buddy_memory_allocation
@@ -12,20 +26,14 @@ http://www.ibm.com/developerworks/cn/linux/l-linux-slab-allocator/index.html
 
 http://zhanyonhu.blog.163.com/blog/static/16186044201461461751705/ stl的allocator替换为boost内存池后的问题
 
+
+# Cache
+
 ###### Buffer cache
 
 http://www.tldp.org/LDP/sag/html/buffer-cache.html
 
 http://stackoverflow.com/questions/6345020/linux-memory-buffer-vs-cache
-
-###### How to adjust kernel maximum share memory size
-
-/etc/sysctl.conf
-```
-kernel.shmmax=134217728
-```
-
-sysctl -w kernel.shmmax=134217728
 
 ###### How to clear or drop the cache buffer pages from Linux memory
 
@@ -59,3 +67,26 @@ or
 ```
 sync; echo 3 > /proc/sys/vm/drop_caches
 ```
+
+
+# Out of memory
+
+[When Linux Runs Out of Memory](http://www.linuxdevcenter.com/pub/a/linux/2006/11/30/linux-out-of-memory.html)
+
+## Overcommit
+
+[What is Overcommit? And why is it bad?](https://www.etalabs.net/overcommit.html)
+
+Overcommit refers to the practice of giving out virtual memory with no guarantee that physical storage for it exists.
+
+The approach taken in reality when you want to avoid committing too much memory is to account for all the memory that’s allocated. In our credit card analogy, this corresponds to using a credit card, but keeping track of all the purchases on it, and never purchasing more than you have funds to pay off. This turns out to be the Right Thing when it comes to managing virtual memory, and in fact it’s what Linux does when you set the vm.overcommit_memory sysctl parameter to the value 2. In this mode, all virtual memory that could potentially be modified (i.e. has read-write permissions) or lacks backing (i.e. an original copy on disk or other device that it could be restored from if it needs to be discarded) is accounted for as “commit charge”, the amount of memory the kernel as committed/promised to applications. When a new virtual memory allocation would cause the commit charge to exceed a configurable limit (by default, the size of swap plus half the size of physical ram), the allocation fails.
+
+[Overcommit Memory in SLES](https://www.suse.com/support/kb/doc/?id=7002775)
+
+Mode 0 is the default mode for SLES servers. This allows for processes to overcommit "reasonable" amounts of memory. If a process attempts to allocate an "unreasonable" amount of memory (as determined by internal heuristics), the memory allocation attempt is denied. In this mode, if many applications perform small overcommit allocations, it is possible for the server to run out of memory. In this situation, the Out of Memory killer (oom-kill) will be used to kill processes until enough memory is available for the server to continue operating.
+
+Mode 1 allows processes to commit as much memory as requested. These allocations will never result in an "out of memory" error. This mode is usually appropriate only in specific scientific applications.
+
+Mode 2 prevents memory overcommit and limits the amount of memory that is available for a process to allocate. This model ensures that processes will not be randomly killed by the oom-killer, and that there will always be enough memory for the kernel to operate properly. The total amount of memory available for use by the system is determined through the following calculation:
+Total Commit Memory = (swap size + (RAM size * overcommit_ratio))
+By default, overcommit_ratio is set to 50. With this setting, the total commit memory size will be equal to the total amount of swap space in the server, plus 50% of the RAM. In other words, if a server has 1 GB of RAM, and 1GB of swap space, the system would have a total commit limit of 1.5GB.
