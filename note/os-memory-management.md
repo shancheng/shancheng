@@ -90,3 +90,7 @@ Mode 1 allows processes to commit as much memory as requested. These allocations
 Mode 2 prevents memory overcommit and limits the amount of memory that is available for a process to allocate. This model ensures that processes will not be randomly killed by the oom-killer, and that there will always be enough memory for the kernel to operate properly. The total amount of memory available for use by the system is determined through the following calculation:
 Total Commit Memory = (swap size + (RAM size * overcommit_ratio))
 By default, overcommit_ratio is set to 50. With this setting, the total commit memory size will be equal to the total amount of swap space in the server, plus 50% of the RAM. In other words, if a server has 1 GB of RAM, and 1GB of swap space, the system would have a total commit limit of 1.5GB.
+
+## max_map_count
+
+https://stackoverflow.com/questions/38384759/vm-max-map-count-and-mmapfs
