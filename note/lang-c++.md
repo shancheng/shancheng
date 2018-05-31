@@ -88,6 +88,100 @@ https://www.codeproject.com/Articles/38449/C-Exceptions-Pros-and-Cons
 
 https://stackoverflow.com/questions/1849490/c-arguments-for-exceptions-over-return-codes
 
+## abort, terminate and exit
+
+http://stackoverflow.com/questions/2820285/abort-terminate-or-exit
+
+abort不做任何处理
+
+```
+#0 0x0000003880a2ffc5 in raise () from /lib64/libc.so.6
+#1 0x0000003880a31a70 in abort () from /lib64/libc.so.6
+#2 0x0000000000400819 in f () at test.cpp:34
+#3 0x000000000040082d in g () at test.cpp:40
+#4 0x0000000000400876 in h () at test.cpp:45
+#5 0x00000000004008a4 in main (argc=1, argv=0x7fffffffe388) at test.cpp:53
+```
+
+exit会处理全局对象和静态对象，但不进行stack unwinding
+
+```
+#0 GlobalObject::~GlobalObject (this=0x600c68, __in_chrg=<value optimized out>) at test.cpp:24
+#1 0x00000000004005ce in __tcf_0 () at test.cpp:47
+#2 0x0000003880a33255 in exit () from /lib64/libc.so.6
+#3 0x0000000000400636 in f () at test.cpp:32
+#4 0x000000000040064f in g () at test.cpp:39
+#5 0x0000000000400667 in h () at test.cpp:44
+#6 0x0000000000400686 in main (argc=1, argv=0x7fffffffe388) at test.cpp:51
+```
+
+如果异常没有捕捉，会调用std::terminate
+
+```
+#0 0x0000003880a2ffc5 in raise () from /lib64/libc.so.6
+#1 0x0000003880a31a70 in abort () from /lib64/libc.so.6
+#2 0x00000038934bed94 in __gnu_cxx::__verbose_terminate_handler() () from /usr/lib64/libstdc++.so.6
+#3 0x00000038934bce46 in ?? () from /usr/lib64/libstdc++.so.6
+#4 0x00000038934bce73 in std::terminate() () from /usr/lib64/libstdc++.so.6
+#5 0x00000038934bcf71 in __cxa_throw () from /usr/lib64/libstdc++.so.6
+#6 0x00000000004008d0 in f () at test.cpp:35
+#7 0x00000000004008f7 in g () at test.cpp:39
+#8 0x0000000000400940 in h () at test.cpp:44
+#9 0x000000000040096d in main (argc=1, argv=0x7fffffffe388) at test.cpp:50
+```
+
+通过set_terminate可以设定一下异常处理函数，但是程序结束后依然会abort
+
+```
+#0 myterminate () at test.cpp:53
+#1 0x00000038934bce46 in ?? () from /usr/lib64/libstdc++.so.6
+#2 0x00000038934bce73 in std::terminate() () from /usr/lib64/libstdc++.so.6
+#3 0x00000038934bcf71 in __cxa_throw () from /usr/lib64/libstdc++.so.6
+#4 0x0000000000400bc8 in f () at test.cpp:40
+#5 0x0000000000400bef in g () at test.cpp:44
+#6 0x0000000000400c38 in h () at test.cpp:49
+#7 0x0000000000400c6f in main (argc=1, argv=0x7fffffffe388) at test.cpp:60
+
+#0 0x0000003880a2ffc5 in raise () from /lib64/libc.so.6
+#1 0x0000003880a31a70 in abort () from /lib64/libc.so.6
+#2 0x00000038934bce4b in ?? () from /usr/lib64/libstdc++.so.6
+#3 0x00000038934bce73 in std::terminate() () from /usr/lib64/libstdc++.so.6
+#4 0x00000038934bcf71 in __cxa_throw () from /usr/lib64/libstdc++.so.6
+#5 0x0000000000400bc8 in f () at test.cpp:40
+#6 0x0000000000400bef in g () at test.cpp:44
+#7 0x0000000000400c38 in h () at test.cpp:49
+#8 0x0000000000400c6f in main (argc=1, argv=0x7fffffffe388) at test.cpp:60
+```
+
+## assert
+
+assert宏的原型定义在<assert.h>中，其作用是如果它的条件返回错误，则终止程序执行
+
+assert()频繁的调用会极大的影响程序的性能，增加额外的开销。在调试结束后，可以通过在包含#include <assert.h>的语句之前插入 #define NDEBUG 来禁用assert调用
+
+## C++ exception
+
+[Java异常处理原则，check and Unchecked Exception](http://blog.51cto.com/wanqiufeng/465684)
+
+[软件错误处理原则 局部问题缩小，全局问题放大](http://club.topsage.com/thread-657437-1-1.html)
+
+## My coding standards
+
+All exceptions should derive from a base class Exception
+- Class Exception is a subclass of std::runtime_error
+- Class Exception has a error level to indicate it's critical or not
+
+Outermost functions (main and Thread::Run)
+- Catch std::exception
+- Set suitable error code when catches an exception
+- Catch (...)
+
+Normal functions
+- Distinguish normal exceptions and critical exceptions
+- Handle normal exceptions
+- Forward critical exceptions
+- A class is normal if the exception is derived from Exception and its error level is normal, all other exceptions are critical
+
 
 # C++ build systems
 
