@@ -17,3 +17,21 @@ http://www.cnblogs.com/LeftNotEasy/tag/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
 [DataScientist](http://yanbohappy.sinaapp.com/?p=418)
 
 [震惊！大数据告诉你，电商会把假货发给谁？](http://developer.51cto.com/art/201511/496794.htm)
+
+
+# Deep Learning
+
+https://github.com/chengstone/cchess-zero
+
+
+# AlphaGo
+
+[Mastering the Game of Go without Human Knowledge](https://deepmind.com/documents/119/agz_unformatted_nature.pdf)
+
+[AlphaGo Zero论文笔记](https://zhuanlan.zhihu.com/p/30707897)
+
+## Gomoku
+
+https://github.com/junxiaosong/AlphaZero_Gomoku
+
+[AlphaZero实战：从零学下五子棋](https://zhuanlan.zhihu.com/p/32089487)

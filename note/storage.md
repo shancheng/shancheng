@@ -102,6 +102,10 @@ http://gsoc.cat-v.org/people/mjl/blog/2007/08/06/1_Rabin_fingerprints/
 
 https://software.intel.com/en-us/articles/accelerate-data-deduplication-using-chunking-and-hashing-functions
 
+## Convergent encryption
+
+https://en.wikipedia.org/wiki/Convergent_encryption
+
 ## Integrity check
 
 https://www.emc.com/collateral/software/white-papers/h7219-data-domain-data-invul-arch-wp.pdf

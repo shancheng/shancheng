@@ -5,6 +5,11 @@ https://www.ibm.com/developerworks/cn/linux/l-assembly/  Linux 汇编语言开�
 http://tldp.org/HOWTO/Assembly-HOWTO/  Linux Assembly HOWTO
 
 
+# Python
+
+https://learnpythonthehardway.org/python3/
+
+
 # Perl
 
 http://perldoc.perl.org/perlstyle.html
