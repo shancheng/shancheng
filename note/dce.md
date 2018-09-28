@@ -5,12 +5,12 @@
 - A: Availability
 - P: Tolerance of network Partition
 
-[http://en.wikipedia.org/wiki/Eventual_consistency](Eventual consistency): If no new updates are made to a given data item, eventually all accesses to that item will return the last updated value.
+[Eventual consistency](http://en.wikipedia.org/wiki/Eventual_consistency): If no new updates are made to a given data item, eventually all accesses to that item will return the last updated value.
 
 # Paxos
 
-[https://en.wikipedia.org/wiki/Paxos_\(computer_science\)](Paxos Wiki)
+[Paxos Wiki](https://en.wikipedia.org/wiki/Paxos_(computer_science))
 
-[https://www.jdon.com/artichect/paxos.html](分布式系统Paxos算法)
+[分布式系统Paxos算法](https://www.jdon.com/artichect/paxos.html)
 
-[https://blog.csdn.net/cnh294141800/article/details/53768464](Paxos协议超级详细解释+简单实例)
+[Paxos协议超级详细解释+简单实例](https://blog.csdn.net/cnh294141800/article/details/53768464)

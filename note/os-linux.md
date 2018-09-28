@@ -28,3 +28,11 @@ https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet
 https://aws.amazon.com/premiumsupport/knowledge-center/linux-static-hostname-rhel7-centos7/
 
 mount -t cifs //server/mnt /mnt -o sec=ntlm
+
+
+# Services
+
+## NFS
+
+[Mount NFS export for machine behind a NAT](https://blog.bigon.be/2013/02/08/mount-nfs-export-for-machine-behind-a-nat/)
+- Adding “insecure” to the exports
