@@ -161,6 +161,10 @@ assert()频繁的调用会极大的影响程序的性能，增加额外的开销
 
 ## C++ exception
 
+[Overview of x64 Calling Conventions](https://msdn.microsoft.com/en-us/library/ms235286.aspx)
+
+[How a C++ compiler implements exception handling](https://www.codeproject.com/articles/2126/how-a-c-compiler-implements-exception-handling)
+
 [Java异常处理原则，check and Unchecked Exception](http://blog.51cto.com/wanqiufeng/465684)
 
 [软件错误处理原则 局部问题缩小，全局问题放大](http://club.topsage.com/thread-657437-1-1.html)

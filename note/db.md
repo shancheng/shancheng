@@ -45,9 +45,13 @@ MySQL: UUID()
 
 # Transaction and concurrency control
 
-https://en.wikipedia.org/wiki/Two-phase_commit_protocol
+Two-Phase Commit
+- https://en.wikipedia.org/wiki/Two-phase_commit_protocol
 
-https://en.wikipedia.org/wiki/Three-phase_commit_protocol
+Three-Phase Commit
+- https://en.wikipedia.org/wiki/Three-phase_commit_protocol
+- https://stackoverflow.com/questions/11209564/three-phase-commit
+- https://www.the-paper-trail.org/post/2008-11-29-consensus-protocols-three-phase-commit/
 
 Isolation and lock
 

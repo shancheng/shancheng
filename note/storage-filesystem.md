@@ -93,6 +93,15 @@ http://www.postgresql.org/docs/9.1/static/wal-reliability.html
 
 [小议同步IO ：fsync与fdatasync](http://www.cnblogs.com/promise6522/archive/2012/05/27/2520028.html)
 
+[Does a sequence of close()/re-open()/fsync() provide the same durability guarantees as fsync()/close()?](https://stackoverflow.com/questions/37288453/calling-fsync2-after-close2)
+- after closing an FD, you lose all ways to enforce durability
+- after an fsync() fails, you cannot call fsync() again in the hope that now your data would be written
+- you must re-do/confirm all writing work if that happens
+
+[PostgreSQL's handling of fsync() errors is unsafe and risks data loss at least on XFS](https://www.postgresql.org/message-id/flat/CAMsr%2BYHh%2B5Oq4xziwwoEfhoTZgr07vdGG%2Bhu%3D1adXx59aTeaoQ%40mail.gmail.com#CAMsr+YHh+5Oq4xziwwoEfhoTZgr07vdGG+hu=1adXx59aTeaoQ@mail.gmail.com)
+
+[Writing programs to cope with I/O errors causing lost writes on Linux](https://stackoverflow.com/questions/42434872/writing-programs-to-cope-with-i-o-errors-causing-lost-writes-on-linux)
+
 
 # Logical Volume Manager
 
