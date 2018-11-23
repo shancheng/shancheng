@@ -22,6 +22,12 @@ https://en.wikipedia.org/wiki/Fusion-io
 
 https://serverfault.com/questions/523278/do-i-need-to-raid-fusion-io-cards
 
+## Battery-Backed Write Cache (BBWC) & Flash-Based Write Cache (FBWC)
+
+[DBA应该知道的RAID卡知识](https://blog.csdn.net/eurasiaxz/article/details/11355149)
+
+BBWC即Battery Backed Write Cache（电池备份写高速缓存）用来提高服务器I/O性能。服务器合并，大量的多媒体程序，实时响应程序，以及大量的存储空间请求，这些东西使得磁盘I/O性能成为服务器系统中的一道瓶颈。减轻负担的一个办法是增加一个BBWC（电池备份写高速缓存）模块。
+
 
 # Storage protocols
 

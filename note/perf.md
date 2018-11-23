@@ -39,11 +39,20 @@ http://www.cs.utah.edu/dept/old/texinfo/as/gprof_toc.html
 
 gprof -b <exe> gmon.out
 
+###### [Understanding iostat](https://coderwall.com/p/utc42q/understanding-iostat)
+
+## Visual Studio Performance Tools
+
+## IBM Quantify
+
+## Intel VTune
+
+
+# Storage
+
 ## iostat
 
 utilization = ( (read requests + write requests) * service time in ms / 1000 ms ) * 100%
-
-###### [Understanding iostat](https://coderwall.com/p/utc42q/understanding-iostat)
 
 ###### [iostat -x](https://dom.as/2009/03/11/iostat/)
 
@@ -61,17 +70,29 @@ Average queue size (avgqu-sz) is a popular metric in the DBA circles, but do be 
 
 Average access time on our disks places some hard limits on the number of IOPs - at 5ms average, we get a very optimistic 200 req/s with no read time. Hence, if you're trying to store several hundred files a second, you might want to revisit the architecture or seriously think about switching to SSD's! Databases such as MySQL work around this constraint by minimizing the number of file handles, caching data, and using aggressive buffering techniques. Willing to potentially loose a little bit of data with InnoDB? Set flush_log_at_trx_commit to 2 to avoid flushing on every transaction in favor of a periodic one second flush.
 
-## Visual Studio Performance Tools
+###### [Fsync Performance on Storage Devices](https://www.percona.com/blog/2018/02/08/fsync-performance-storage-devices/)
 
-## IBM Quantify
+```
+#!/usr/bin/python
+import os, sys, mmap
+# Open a file
+fd = os.open( "testfile", os.O_RDWR|os.O_CREAT|os.O_DIRECT )
+m = mmap.mmap(-1, 512)
+for i in range (1,1000):
+   os.lseek(fd,os.SEEK_SET,0)
+   m[1] = "1"
+   os.write(fd, m)
+   os.fsync(fd)
+# Close opened file
+os.close( fd )
+```
 
-## Intel VTune
 
 # Network
 
 [10G(82599EB) 网卡测试优化(ethtool)](http://www.tuicool.com/articles/EVRjQb)
 
-## Network tuning steps
+###### Network tuning steps
 
 Find NUMA Nodes of NICs and show results
 
@@ -88,6 +109,7 @@ Confine workload to same NUMA Node as NICs using numactl/numad
 Tune NIC coalescense to increase usecs before hard interrupt
 
 Disable C-states C1E and below in BIOS and kernel
+
 
 # Web
 
