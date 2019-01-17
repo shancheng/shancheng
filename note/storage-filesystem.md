@@ -58,6 +58,12 @@ http://en.wikipedia.org/wiki/Filesystem_in_Userspace
 
 http://www.ibm.com/developerworks/library/l-fuse/index.html
 
+https://lastlog.de/misc/fuse-doc/doc/html/
+
+[Write a filesystem with FUSE](https://engineering.facile.it/blog/eng/write-filesystem-fuse/)
+
+[Writing a FUSE Filesystem: a Tutorial](https://www.cs.nmsu.edu/~pfeiffer/fuse-tutorial/)
+
 
 # Filesystem performance
 

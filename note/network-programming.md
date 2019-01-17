@@ -13,6 +13,8 @@ http://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html
 
 ###### Close
 
+[Graceful Shutdown, Linger Options, and Socket Closure](https://docs.microsoft.com/en-us/windows/desktop/WinSock/graceful-shutdown-linger-options-and-socket-closure-2)
+
 http://stackoverflow.com/questions/4160347/close-vs-shutdown-socket
 How to judge if the peer has closed?
 - recv returns 0
@@ -21,6 +23,8 @@ How to judge if the peer has closed?
 https://stackoverflow.com/questions/3757289/tcp-option-so-linger-zero-when-its-required
 
 http://www.cnblogs.com/zhenjing/archive/2011/04/20/2021791.html
+
+[TCP的三次握手与四次挥手过程，各个状态名称与含义，TIMEWAIT的作用](https://blog.csdn.net/sinat_32487221/article/details/55272305)
 
 ###### Out of band (OOB)
 
