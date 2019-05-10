@@ -187,6 +187,19 @@ Normal functions
 - A class is normal if the exception is derived from Exception and its error level is normal, all other exceptions are critical
 
 
+# C++11
+
+[理解 C++ 的 Memory Order](http://senlinzhan.github.io/2017/12/04/cpp-memory-order/)
+
+[关于Singleton中使用DCLP和Memory barrier的一点疑问？](https://www.zhihu.com/question/35522476)
+
+[C++11 修复了双重检查锁定问题](http://blog.jobbole.com/52164/)
+
+[Double-Checked Locking is Fixed In C++11](https://preshing.com/20130930/double-checked-locking-is-fixed-in-cpp11/)
+
+[Why Memory Barrier？](http://www.cnblogs.com/foohack/p/3582217.html)
+
+
 # C++ build systems
 
 http://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html
