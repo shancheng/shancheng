@@ -17,6 +17,10 @@ https://stackoverflow.com/questions/21374491/vm-min-free-kbytes-why-keep-minimum
 
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_tuning_and_optimization_guide/sect-virtualization_tuning_optimization_guide-numa-auto_numa_balancing
 
+###### max_map_count
+
+https://stackoverflow.com/questions/38384759/vm-max-map-count-and-mmapfs
+
 
 # Memory allocation
 
@@ -33,6 +37,10 @@ http://www.ibm.com/developerworks/cn/linux/l-linux-slab-allocator/index.html
 ###### STL allocator
 
 http://zhanyonhu.blog.163.com/blog/static/16186044201461461751705/ stl的allocator替换为boost内存池后的问题
+
+###### tcmalloc
+
+https://www.cnblogs.com/raymondshiquan/archive/2011/06/25/tcmalloc_configuration_analysis.html
 
 
 # Cache
@@ -100,7 +108,3 @@ Total Commit Memory = (swap size + (RAM size * overcommit_ratio))
 By default, overcommit_ratio is set to 50. With this setting, the total commit memory size will be equal to the total amount of swap space in the server, plus 50% of the RAM. In other words, if a server has 1 GB of RAM, and 1GB of swap space, the system would have a total commit limit of 1.5GB.
 
 [Virtual memory settings in Linux - The Problem with Overcommit](http://engineering.pivotal.io/post/virtual_memory_settings_in_linux_-_the_problem_with_overcommit/)
-
-## max_map_count
-
-https://stackoverflow.com/questions/38384759/vm-max-map-count-and-mmapfs
