@@ -82,6 +82,9 @@ System Management Interface Tool (SMIT)
 
 [Logical Volume Manager (LVM) Commands for AIX](http://wxs.ro/mirrors/aixlvm/tips-aix-lvm.html)
 
+Extend a file system online
+- chfs -a size=+30G /usr
+
 ## Lib
 
 [AIX Toolbox for Linux Applications](http://www-03.ibm.com/systems/power/software/aix/linux/toolbox/alpha.html)
@@ -90,25 +93,34 @@ System Management Interface Tool (SMIT)
 
 ## AIX switching between 32-bit and 64-bit mode
 
-Query
+###### Query
 
 bootinfo -y tells you if your Hardware can do 64 bit when it stats "64"
+
 bootinfo -K tells you if your Kernel is currently running in 64 bit mode.
 
-Switching from 32-bit to 64-bit mode
+###### Switching from 32-bit to 64-bit mode
 
 ln -sf /usr/lib/boot/unix_64 /unix
+
 ln -sf /usr/lib/boot/unix_64 /usr/lib/boot/unix
+
 bosboot -ad /dev/ipldevice
+
 shutdown -Fr
+
 bootinfo -K (should now show 64)
 
-Switching from 64-bit to 32-bit mode
+###### Switching from 64-bit to 32-bit mode
 
 ln -sf /usr/lib/boot/unix_mp /unix
+
 ln -sf /usr/lib/boot/unix_mp /usr/lib/boot/unix
+
 bosboot -ad /dev/ipldevice
+
 shutdown -Fr
+
 bootinfo -K (should now show 32)
 
 ## AIX nargs
