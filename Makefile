@@ -1,4 +1,4 @@
-SUBDIRS := db
+SUBDIRS := db src
 
 .PHONY: all $(SUBDIRS)
 all: $(SUBDIRS)

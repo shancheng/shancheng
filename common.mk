@@ -50,6 +50,7 @@ endif
 
 ifeq ($(OS), Linux)
     CPPFLAGS += -m64
+    CXXFLAGS += -std=c++0x
     LDFLAGS  += -m64
 endif
 
