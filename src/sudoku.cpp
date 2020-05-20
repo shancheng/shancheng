@@ -1,7 +1,6 @@
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
-#include <set>
 #include <vector>
 #include <boost/program_options.hpp>
 #include <boost/shared_ptr.hpp>
@@ -41,7 +40,7 @@ struct Options {
     os << "---------------------------------------------------------------\n";
     os << "File:       " << opt_file << "\n";
     os << "Size:       " << opt_size << "\n";
-    os << "Group size: " << opt_blocksize << "\n";
+    os << "Block size: " << opt_blocksize << "\n";
     os << "\n";
   }
 } options;
@@ -50,11 +49,14 @@ struct Cell {
   uint32_t row {0};
   uint32_t col {0};
   uint32_t value {0};
+
+  // Use uint32_t as a set, bit n represents the value n
   uint32_t* rowflag {NULL};
   uint32_t* colflag {NULL};
   uint32_t* blockflag {NULL};
+
   IntVector candidates;
-  uint32_t rank {0};
+  size_t key;  // Used for comparison
 
   void SetFlag(uint32_t value) {
     uint32_t bitval = 0x01 << value; 
@@ -83,10 +85,7 @@ ostream& operator<<(ostream& os, const Cell& cell) {
 
 struct CellComparator {
   bool operator()(const Cell* x, const Cell* y) const {
-    if (x->rank == y->rank) {
-      return 100 * x->row + x->col < 100 * y->row + y->col;
-    }
-    return x->rank < y->rank;
+    return x->key < y->key;
   }
 };
 
@@ -145,10 +144,10 @@ public:
           for (uint32_t i = 1; i <= options.opt_size; ++i) {
             if (!CheckBit(flags, i)) {
               cell.candidates.push_back(i);
-              ++cell.rank;
             }
           }
-          vec_.push_back(&cells_[row][col]);
+          cell.key = MAXSIZE * MAXSIZE * cell.candidates.size() + MAXSIZE * cell.row + cell.col;
+          vec_.push_back(&cell);
         }
         if (options.opt_debug) {
           cout << cells_[row][col];
