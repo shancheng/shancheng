@@ -10,6 +10,8 @@
 
 [iostat来对linux硬盘IO性能进行了解](http://www.php-oa.com/2009/02/03/iostat.html)
 
+[ftrace：跟踪你的内核函数](https://zhuanlan.zhihu.com/p/33267453)
+
 top
 
 gstack

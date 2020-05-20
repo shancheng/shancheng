@@ -1,6 +1,6 @@
 # Concepts
 
-Database cluster:	A set of databases managed by an instance of DB server
+Database cluster: A set of databases managed by an instance of DB server
 
 Schema: Namespace in database
 
@@ -21,6 +21,10 @@ Difference between BLOB and text
 Character set
 
 Collation: Determine how to compare two chars
+
+###### Naming
+
+[Table Naming Dilemma: Singular vs. Plural Names](https://stackoverflow.com/questions/338156/table-naming-dilemma-singular-vs-plural-names)
 
 ###### GUID
 
