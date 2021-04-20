@@ -42,6 +42,8 @@ http://zhanyonhu.blog.163.com/blog/static/16186044201461461751705/ stl的allocat
 
 https://www.cnblogs.com/raymondshiquan/archive/2011/06/25/tcmalloc_configuration_analysis.html
 
+https://blog.cloudflare.com/the-effect-of-switching-to-tcmalloc-on-rocksdb-memory-use/
+
 
 # Cache
 
