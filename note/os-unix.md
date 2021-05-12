@@ -76,6 +76,8 @@ HP-UX | tar xvf DEPOT_FILE
 AIX | installp -a -F -d IMAGE_FILE all
 
 
+
+
 # AIX
 
 System Management Interface Tool (SMIT)
@@ -147,6 +149,8 @@ Change takes effect immediately and is preserved over boot.
 Diagnosis: Users cannot execute any additional processes because the argument list passed to the exec() system call is too long.
 
 Tuning: This is a mechanism to prevent the exec() subroutines from failing if the argument list is too long. Please note that tuning to a higher ncargs value puts additional constraints on system memory resources.
+
+
 
 
 # HP-UX

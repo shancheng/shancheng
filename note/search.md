@@ -10,6 +10,9 @@ http://blog.socialcast.com/realtime-search-solr-vs-elasticsearch/
 
 http://sphinxsearch.com/
 
+
+
+
 # Lucene
 
 http://www.lucenetutorial.com/
@@ -19,6 +22,9 @@ http://www.lucenetutorial.com/
 http://www.lucenetutorial.com/lucene-vs-solr.html
 
 http://solr-vs-elasticsearch.com/
+
+
+
 
 # Solr
 
@@ -30,9 +36,15 @@ Solr: Indexing SQL databases made easier!
 
 Apache Solr: A Practical Approach to Enterprise Search
 
+
+
+
 # Elastic search
 
 http://www.elasticsearchtutorial.com/index.html
+
+
+
 
 # Nutch
 

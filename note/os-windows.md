@@ -1,6 +1,9 @@
 The manifest file
 http://mariusbancila.ro/blog/2010/03/24/visual-studio-2010-changes-for-vc-part-5/
 
+
+
+
 # Core dump
 
 "C:\Program Files\Debugging Tools For Windows (x64)\ntsd" -iaec "-c """.logopen /t C:\Corefiles\jit.log; !analyze -v; ~*k250; lmv; .dump /mA /u C:\Corefiles\jit.dmp; q""" -g"

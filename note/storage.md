@@ -29,6 +29,8 @@ https://serverfault.com/questions/523278/do-i-need-to-raid-fusion-io-cards
 BBWC即Battery Backed Write Cache（电池备份写高速缓存）用来提高服务器I/O性能。服务器合并，大量的多媒体程序，实时响应程序，以及大量的存储空间请求，这些东西使得磁盘I/O性能成为服务器系统中的一道瓶颈。减轻负担的一个办法是增加一个BBWC（电池备份写高速缓存）模块。
 
 
+
+
 # Storage protocols
 
 ## iSCSI
@@ -48,6 +50,8 @@ https://www.storagecraft.com/blog/storage-wars-file-block-object-storage/
 http://www.enterprisestorageforum.com/storage-management/object-storage-vs.-file-storage.html
 
 
+
+
 # Ceph
 
 http://docs.ceph.com/docs/master/
@@ -65,6 +69,8 @@ https://www.virtualtothecore.com/en/adventures-ceph-storage-part-1-introduction/
 https://www.virtualtothecore.com/en/adventures-ceph-storage-part-2-architecture-dummies/
 
 https://www.virtualtothecore.com/en/adventures-ceph-storage-part-3-design-nodes/
+
+
 
 
 # Deduplication
@@ -161,6 +167,8 @@ Minio is a distributed object storage server, written in Go and open sourced und
 ###### LIO
 
 https://en.wikipedia.org/wiki/LIO_(SCSI_target)
+
+
 
 
 # Hierarchical storage management

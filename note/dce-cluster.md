@@ -15,6 +15,8 @@
 高​​​​​​​性​​​​​​​能​​​​​​​型​​​​​​​群​​​​​​​集​​​​​​​使​​​​​​​用​​​​​​​群​​​​​​​集​​​​​​​节​​​​​​​点​​​​​​​来​​​​​​​执​​​​​​​行​​​​​​​并​​​​​​​行​​​​​​​运​​​​​​​算​​​​​​​。​​​​​​​高​​​​​​​性​​​​​​​能​​​​​​​型​​​​​​​群​​​​​​​集​​​​​​​允​​​​​​​许​​​​​​​应​​​​​​​用​​​​​​​程​​​​​​​序​​​​​​​以​​​​​​​并​​​​​​​行​​​​​​​的​​​​​​​方​​​​​​​式​​​​​​​工​​​​​​​作​​​​​​​，因​​​​​​​此​​​​​​​提​​​​​​​高​​​​​​​了​​​​​​​应​​​​​​​用​​​​​​​程​​​​​​​序​​​​​​​的​​​​​​​性​​​​​​​能​​​​​​​。​​​​​​​（高​​​​​​​性​​​​​​​能​​​​​​​型​​​​​​​群​​​​​​​集​​​​​​​也​​​​​​​被​​​​​​​称​​​​​​​为​​​​​​​计​​​​​​​算​​​​​​​群​​​​​​​集​​​​​​​或​​​​​​​网​​​​​​​格​​​​​​​计​​​​​​​算​​​​​​​。​​​​​​​）
 
 
+
+
 # Cluster Infrastructure
 
 Cluster management manages cluster quorum and cluster membership.
@@ -24,11 +26,15 @@ Lock management is a common cluster-infrastructure service that provides a mecha
 Fencing is the disconnection of a node from the cluster's shared storage. Fencing cuts off I/O from shared storage, thus ensuring data integrity. The cluster infrastructure performs fencing through the fence daemon, fenced.
 
 
+
+
 # Volume manager
 
 Veritas Volume Manager
 
 Oracle Automatic Storage Management
+
+
 
 
 # Clusterware

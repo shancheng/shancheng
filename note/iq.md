@@ -5,6 +5,9 @@ http://www.itmian4.com/forum.php?mod=viewthread&tid=244&extra=page%3D2%26filter%
 http://www.itmian4.com/forum.php?mod=viewthread&tid=1256&extra=page%3D1%26filter%3Dtypeid%26typeid%3D11
 75道逻辑思维题
 
+
+
+
 # 题目
 
 在一幢100层大楼下，有21根电线线头分别标有数字1到21。这些电线一直延伸到大楼楼顶，楼顶的线头处标有字母A到U，一共21个字母。此时不知道下面的数字和上面的字母的对应关系，有一个电池，一个灯泡，和许多很短的电线，如何只上下楼一次就能确定电线线头的对应关系？

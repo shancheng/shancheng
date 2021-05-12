@@ -7,6 +7,9 @@
 
 [Eventual consistency](http://en.wikipedia.org/wiki/Eventual_consistency): If no new updates are made to a given data item, eventually all accesses to that item will return the last updated value.
 
+
+
+
 # Paxos
 
 [Paxos Wiki](https://en.wikipedia.org/wiki/Paxos_(computer_science))

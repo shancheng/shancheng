@@ -13,6 +13,8 @@
 http://www.highlyscalablesystems.com/3597/hadoop-installation-tutorial-hadoop-2-x/
 
 
+
+
 # Scalability
 
 [http://www.csdn.net/article/2013-08-22/2816669-new-tps-record-and-how-they-do-it](磨剑三载，且看从容应对14.3万TPS的Twitter是怎样炼成的！)

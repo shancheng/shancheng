@@ -40,6 +40,9 @@ https://leetcode.com/problems/edit-distance/
 3.更改一个字符
 字符串S1和S2的编辑距离定义为从S1变成S2所需要原子操作的最少次数。
 
+
+
+
 # List
 
 https://leetcode.com/problems/reverse-linked-list/
@@ -48,6 +51,9 @@ https://leetcode.com/problems/reverse-linked-list-ii/
 
 https://leetcode.com/problems/reverse-nodes-in-k-group/
 程序员面试宝典(19)－反转链表
+
+
+
 
 # Tree
 
@@ -85,6 +91,9 @@ https://www.topcoder.com/community/data-science/data-science-tutorials/range-min
 http://blog.csdn.net/yxc135/article/details/10081419
 Lowest Common Ancestor问题的解决思路
 
+
+
+
 # Stack, Queue, and Heap
 
 ###### 表达式求值
@@ -97,7 +106,10 @@ https://leetcode.com/problems/implement-queue-using-stacks/
 
 https://leetcode.com/problems/implement-stack-using-queues/
 
-# hash
+
+
+
+# Hash
 
 ###### Bloom filter
 
@@ -129,6 +141,9 @@ http://en.wikipedia.org/wiki/Locality-preserving_hashing
 
 http://en.wikipedia.org/wiki/Space-filling_curve
 
+
+
+
 # Graph
 
 ###### DFS
@@ -147,11 +162,18 @@ http://en.wikipedia.org/wiki/Space-filling_curve
 
 ###### Bipartite
 
+
+
+
+
 # Binary search
 
 https://leetcode.com/problems/search-a-2d-matrix/
 
 https://leetcode.com/problems/search-a-2d-matrix-ii/
+
+
+
 
 # Reference
 

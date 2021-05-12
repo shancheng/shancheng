@@ -7,6 +7,8 @@ https://stackoverflow.com/questions/784173/what-are-the-performance-characterist
 https://www.sqlite.org/formatchng.html
 
 
+
+
 # MySQL
 
 ## Maintenance
@@ -49,6 +51,8 @@ mysqlbinlog --stop-date
 淘宝内部分享：怎么跳出MySQL的10个大坑
 
 淘宝内部分享：MySQL & MariaDB性能优化
+
+
 
 
 # PostgreSQL

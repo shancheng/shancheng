@@ -45,6 +45,8 @@ https://www.cnblogs.com/raymondshiquan/archive/2011/06/25/tcmalloc_configuration
 https://blog.cloudflare.com/the-effect-of-switching-to-tcmalloc-on-rocksdb-memory-use/
 
 
+
+
 # Cache
 
 ###### Buffer cache
@@ -85,6 +87,8 @@ or
 ```
 sync; echo 3 > /proc/sys/vm/drop_caches
 ```
+
+
 
 
 # Out of memory

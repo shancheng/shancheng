@@ -21,6 +21,8 @@ apt-get
 https://wiki.centos.org/HowTos/SetUpSamba
 
 
+
+
 # Linux administration
 
 https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet
@@ -28,6 +30,8 @@ https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet
 https://aws.amazon.com/premiumsupport/knowledge-center/linux-static-hostname-rhel7-centos7/
 
 mount -t cifs //server/mnt /mnt -o sec=ntlm
+
+
 
 
 # Services

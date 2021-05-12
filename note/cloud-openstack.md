@@ -43,6 +43,8 @@ Make change in stackrc :
 ```
 
 
+
+
 # Networking
 
 https://www.rdoproject.org/networking/difference-between-floating-ip-and-private-ip/

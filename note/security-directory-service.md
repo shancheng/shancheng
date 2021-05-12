@@ -1,5 +1,8 @@
 https://en.wikipedia.org/wiki/Directory_service
 
+
+
+
 # LDAP
 
 https://sourceforge.net/projects/ldapadmin/
@@ -11,6 +14,10 @@ https://www.scribd.com/document/94762196/OpenLDAP-Scaling-Guide
 http://blog.csdn.net/hitabc141592/article/details/22931179
 
 http://genetics.wustl.edu/technology/centos-6-4-openldap-setup-with-samba-support/
+
+
+
+
 
 # AD
 

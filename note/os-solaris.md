@@ -3,6 +3,9 @@
 http://hi.baidu.com/dbaeyes/blog/item/9bf88bed306f204a78f05570.html
 20%的SOLARIS知识解决80%的问题
 
+
+
+
 # Advanced Lights Out Manager
 
 http://docs.oracle.com/cd/E19076-01/t1k.srvr/819-3250-11/command_shell.html
@@ -14,6 +17,9 @@ poweron
 console -f
 
 break
+
+
+
 
 # Solaris Management Console (SMC)
 
@@ -28,13 +34,22 @@ Filesystem
 - /etc/vfstab
 - /etc/mnttab
 
+
+
+
 # Package management
 
 pkg*
 
+
+
+
 # Service management
 
 svc*
+
+
+
 
 # Device management
 
@@ -45,6 +60,9 @@ iostat -E
 prtconf
 
 prtdiag
+
+
+
 
 # HBA
 
@@ -58,6 +76,9 @@ prtpicl -v
 
 luxadm -e port
 
+
+
+
 # NFS
 
 http://help.lockergnome.com/linux/Mounting-nfs-solaris-client-linux-server--ftopict487875.html
@@ -66,6 +87,9 @@ http://help.lockergnome.com/linux/Mounting-nfs-solaris-client-linux-server--ftop
 ```
 NFS_CLIENT_VERSMAX=3
 ```
+
+
+
 
 # Network
 

@@ -10,6 +10,9 @@ AES | 3 GiB/s
 
 Bluefish > AES > 3DES
 
+
+
+
 # CPU instructions
 
 https://en.wikipedia.org/wiki/Advanced_Vector_Extensions
@@ -40,6 +43,9 @@ The performance of this family of hash functions is expected to be roughly the s
 2. Ideal interleaved layout that permits a streaming access of data and maps directly to SIMD execution units without requiring transpose operations on the data
 
 [Is SHA-3 slow?](http://keccak.noekeon.org/is_sha3_slow.html)
+
+
+
 
 # SIMD
 

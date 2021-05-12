@@ -3,6 +3,8 @@ http://en.wikipedia.org/wiki/Rule_of_three_(C++\_programming)
 https://stackoverflow.com/questions/1434937/namespace-functions-versus-static-methods-on-a-class
 
 
+
+
 # C++ books and resources
 
 Modern C++ Design
@@ -28,6 +30,8 @@ Writing Clean Code
 [Guru of the Week](http://www.gotw.ca/gotw/)
 
 
+
+
 # C++ template
 
 http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern
@@ -51,6 +55,8 @@ Forward Iterator：该类迭代器可以在一个正确的区间中进行读写�
 Bidirectional Iterator：该类迭代器是在Forward Iterator的基础上提供了单步向后迭代元素的能力。
 
 Random Access Iterator：该类迭代器能完成上面所有迭代器的工作，它自己独有的特性就是可以像指针那样进行算术计算，而不是仅仅只有单步向前或向后迭代。
+
+
 
 
 # C++ macro and inline
@@ -80,6 +86,8 @@ __LINE__
 #define NEW(class_, ...) new class_(__VA_ARGS__)
 #define CONNECT(a, b) a##b
 ```
+
+
 
 
 # C++ error handling
@@ -187,6 +195,8 @@ Normal functions
 - A class is normal if the exception is derived from Exception and its error level is normal, all other exceptions are critical
 
 
+
+
 # C++11
 
 [理解 C++ 的 Memory Order](http://senlinzhan.github.io/2017/12/04/cpp-memory-order/)
@@ -198,6 +208,8 @@ Normal functions
 [Double-Checked Locking is Fixed In C++11](https://preshing.com/20130930/double-checked-locking-is-fixed-in-cpp11/)
 
 [Why Memory Barrier？](http://www.cnblogs.com/foohack/p/3582217.html)
+
+
 
 
 # C++ build systems
@@ -217,3 +229,14 @@ Jam and Boost.Jam
 http://stackoverflow.com/questions/1368746/optimization-in-gcc
 
 http://www.gentoo.org/doc/zh_cn/gcc-optimization.xml
+
+
+
+
+# Portability
+
+###### How to print abstract data items?
+
+https://lwn.net/Kernel/LDD3/
+
+The main problem with _t data items is that when you need to print them, it’s not always easy to choose the right printk or printf format, and warnings you resolve on one architecture reappear on another. For example, how would you print a size_t, that is unsigned long on some platforms and unsigned int on some others?

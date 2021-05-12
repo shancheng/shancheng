@@ -9,6 +9,8 @@ Link file
 Device file
 
 
+
+
 # Filesystem types
 
 swap, proc
@@ -23,11 +25,15 @@ FAT, VFAT, NTFS
 NFS, GFS
 
 
+
+
 # Clustered filesystems
 
 http://en.wikipedia.org/wiki/Clustered_file_system
 
 http://www.yolinux.com/TUTORIALS/LinuxClustersAndFileSystems.html
+
+
 
 
 # Encrypted filesystems
@@ -52,6 +58,8 @@ Unmount | umount /dev/mapper/NAME
 Close | cryptsetup luksClose DEVICE
 
 
+
+
 # FUSE
 
 http://en.wikipedia.org/wiki/Filesystem_in_Userspace
@@ -63,6 +71,8 @@ https://lastlog.de/misc/fuse-doc/doc/html/
 [Write a filesystem with FUSE](https://engineering.facile.it/blog/eng/write-filesystem-fuse/)
 
 [Writing a FUSE Filesystem: a Tutorial](https://www.cs.nmsu.edu/~pfeiffer/fuse-tutorial/)
+
+
 
 
 # Filesystem performance
@@ -84,6 +94,8 @@ http://www.brentozar.com/archive/2009/05/san-multipathing-part-1-what-are-paths/
 http://www.brentozar.com/archive/2009/05/san-multipathing-part-2-what-multipathing-does/
 
 http://i.dell.com/sites/content/business/solutions/brochures/zh/Documents/cb107-multi-path-io_cn.pdf
+
+
 
 
 # Transaction
@@ -109,6 +121,8 @@ http://www.postgresql.org/docs/9.1/static/wal-reliability.html
 [Writing programs to cope with I/O errors causing lost writes on Linux](https://stackoverflow.com/questions/42434872/writing-programs-to-cope-with-i-o-errors-causing-lost-writes-on-linux)
 
 
+
+
 # Logical Volume Manager
 
 https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)
@@ -123,6 +137,8 @@ umount /mnt
 lvconvert --merge /dev/fedora/storage_snapshot
 mount /dev/fedora/storage /mnt
 ```
+
+
 
 
 # Resource

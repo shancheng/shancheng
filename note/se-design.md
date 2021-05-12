@@ -8,6 +8,9 @@ Lean
 
 OO
 
+
+
+
 # UML
 
 http://en.wikipedia.org/wiki/List_of_UML_tools
@@ -56,6 +59,9 @@ Tools
 - Visual Paradigm
 - StarUML
 - Enterprise Architect
+
+
+
 
 # Design Patterns
 

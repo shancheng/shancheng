@@ -71,6 +71,8 @@ http://danier.iteye.com/blog/575158
 http://blog.csdn.net/sparkliang/article/details/5486069
 
 
+
+
 # I/O multiplexing
 
 ###### select
@@ -98,6 +100,8 @@ http://dev.gameres.com/Program/Control/IOCP.htm
 http://www.ibm.com/developerworks/cn/linux/l-async/#N10056
 
 
+
+
 # C10k tuning
 
 ```
@@ -119,6 +123,8 @@ nofile的soft limit不能超过其hard limit
 nofile的hard limit不能超过/proc/sys/fs/nr_open
 
 
+
+
 # Framework
 
 ACE
@@ -128,6 +134,8 @@ Boost.Asio
 libevent
 
 libuv
+
+
 
 
 # libcurl

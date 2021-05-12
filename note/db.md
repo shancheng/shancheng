@@ -47,6 +47,8 @@ Oracle: SYS_GUID()
 MySQL: UUID()
 
 
+
+
 # Transaction and concurrency control
 
 Two-Phase Commit
@@ -64,6 +66,8 @@ Optimistic concurrency control
 Isolation Level
 
 
+
+
 # Index
 
 https://en.wikipedia.org/wiki/B-tree
@@ -71,6 +75,8 @@ https://en.wikipedia.org/wiki/B-tree
 https://en.wikipedia.org/wiki/R-tree
 
 http://postgis.net/docs/using_postgis_dbmanagement.html#gist_indexes
+
+
 
 
 # Normalization

@@ -4,6 +4,9 @@
 
 [高并发性能调试经验分享](http://makaidong.com/chenpingzhao/356_14088.html)
 
+
+
+
 # Tools
 
 ## Common tools
@@ -50,6 +53,9 @@ gprof -b <exe> gmon.out
 ## Intel VTune
 
 
+
+
+
 # Storage
 
 ## iostat
@@ -90,6 +96,8 @@ os.close( fd )
 ```
 
 
+
+
 # Network
 
 [10G(82599EB) 网卡测试优化(ethtool)](http://www.tuicool.com/articles/EVRjQb)
@@ -111,6 +119,8 @@ Confine workload to same NUMA Node as NICs using numactl/numad
 Tune NIC coalescense to increase usecs before hard interrupt
 
 Disable C-states C1E and below in BIOS and kernel
+
+
 
 
 # Web
