@@ -1,5 +1,9 @@
 # Signals and job control
 
+###### Signal programming
+
+[Pthreads Programming: Chapter 5 - Pthreads and UNIX](https://maxim.int.ru/bookshelf/PthreadsProgram/htm/r_40.html)  
+
 ###### SIGHUP
 
 http://en.wikipedia.org/wiki/SIGHUP Ctrl+Z

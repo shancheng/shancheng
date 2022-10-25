@@ -186,6 +186,7 @@ All exceptions should derive from a base class Exception
 Outermost functions (main and Thread::Run)
 - Catch std::exception
 - Set suitable error code when catches an exception
+- [Catch (abi::__forced_unwind&) and rethrow to forbid aborting caused by pthread_exit and pthread_cancel](https://forums.opensuse.org/showthread.php/450418-pthread_exit-c-and-FATAL-exception-not-rethrown)
 - Catch (...)
 
 Normal functions
